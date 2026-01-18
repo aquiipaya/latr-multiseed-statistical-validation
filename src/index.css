@@ -1,0 +1,35 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 以下の部分は、シミュレーションの描画を
+  AI Studioのように「クッキリ」見せるための追加設定です
+*/
+@layer base {
+  body {
+    @apply antialiased overflow-hidden;
+    background-color: #020617; /* 全体の背景色を深紺色に固定 */
+  }
+}
+
+/* キャンバスをドット絵のようにシャープに拡大する設定 */
+.image-pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* スクロールバーをおしゃれにする設定 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #020617;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
